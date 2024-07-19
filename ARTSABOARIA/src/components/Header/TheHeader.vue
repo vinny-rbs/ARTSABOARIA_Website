@@ -6,10 +6,10 @@
 <template>
     <header>
         <div id="logo">
-            <a href="/">
+            <RouterLink to="/">
                 <img src="../Header/Icons/bubble icon.png" alt="" id="logo_icon">
                 <img src="../Header/Image/LogoTexto.svg" alt="" id="logo_text">
-            </a>
+            </RouterLink>
         </div>
         <div class="categoria">
             <nav>
