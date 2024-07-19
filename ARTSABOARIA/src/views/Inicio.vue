@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MainLaddingPage from '../components/MainLaddingPage.vue'
+import MainLaddingPage from '../components/main_inicio/MainLaddingPage.vue'
 </script>
 
 <template>
