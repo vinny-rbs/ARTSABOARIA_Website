@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Laddingpage from '../views/Laddingpage.vue'
-import Gallery from '../views/Gallery.vue'
-import AboutView from '../views/AboutView.vue'
+import Inicio from '../views/Inicio.vue'
+import Galeria from '../views/Galeria.vue'
+import Contato from '../views/Contato.vue'
+import Orientacoes from '../views/Orientacoes.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,17 +10,22 @@ const router = createRouter({
     {
       path: '/',
       name: 'Inicio',
-      component: Laddingpage
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: AboutView
+      component: Inicio
     },
     {
       path: '/galeria',
       name: 'Galeria',
-      component: Gallery
+      component: Galeria
+    },
+    {
+      path: '/contato',
+      name: 'Contato',
+      component: Contato
+    },
+    {
+      path: '/orientacoes',
+      name: 'Orientações',
+      component: Orientacoes
     }
   ]
 })
