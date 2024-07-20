@@ -3,7 +3,7 @@
 header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 13vh;
     width: 100vw;
     padding: 50px;
@@ -38,4 +38,16 @@ nav > a {
 
 span {
     color: var(--main-color-blue);
+}
+
+#perfil {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: solid 3px var(--main-color-blue);
+    cursor: pointer;
+}
+
+#categorias {
+    margin: 0;
 }

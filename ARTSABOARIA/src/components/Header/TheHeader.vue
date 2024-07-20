@@ -19,6 +19,11 @@
                 <RouterLink to="/orientacoes">Orientações</RouterLink>
             </nav>
         </div>
+        <div >
+            <RouterLink to="/">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" id="perfil">
+            </RouterLink>
+        </div>
     </header>
   <RouterView />
 </template>
