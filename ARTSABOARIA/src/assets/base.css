@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
-    --main-color-black: #212122;
+    --main-color-white: #F7F6F3;
+    --main-color-black: #1E1A1D;
     --main-color-blue: #41A1F7;
     --main-color-orange: #FFA500;
 }
@@ -13,6 +14,11 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+}
+
+body {
+    background-color: var(--main-color-white);
 }
 
 .router-link-active {
@@ -35,5 +41,6 @@ button {
 button:hover {
     color: #fff;
     background-color: var(--main-color-blue);
+    font-weight: bolder;
     border: #fff;
 }

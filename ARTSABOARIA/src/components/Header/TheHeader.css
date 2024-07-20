@@ -7,19 +7,19 @@ header {
     height: 13vh;
     width: 100vw;
     padding: 50px;
-    background-color: #fff;
+    background-color: var(--main-color-white);
     box-shadow: 0px 5px 13px 5px rgba(0, 0, 0, 0.025);
     
 }
 
 #logo_icon {
-    width: 62px;
-    height: 62px;
+    width: 60px;
+    height: 60px;
 }
 
 #logo_text {
     width: 250px;
-    height: 62px;
+    height: 60px;
 }
 
 nav {
@@ -34,4 +34,8 @@ nav > a {
     color: #41A1F7;
     font-size: 20px;
     text-decoration-color: transparent;
+}
+
+span {
+    color: var(--main-color-blue);
 }
