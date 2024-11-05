@@ -22,7 +22,11 @@ body {
 }
 
 .router-link-active {
-    text-decoration-color: var(--main-color-orange);
+    border-bottom: 2px solid var(--main-color-orange);
+}
+
+b {
+    color: var(--main-color-blue);
 }
 
 button {
@@ -34,7 +38,7 @@ button {
     cursor: pointer;
     color: var(--main-color-blue);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     transition: all 0.25s ease-in;
 }
 

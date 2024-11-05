@@ -7,8 +7,8 @@
     <main>
         <section>
             <div id="text">
-                <h1>Quem nós <span>somos</span>?</h1><br>
-                <h3>Nós somos uma pequena empresa familiar, fundada recentemente em <span>Búzios-RJ</span> com o intuito de gerar não somente renda mas também movimentar a economia local, gerar empregos e encorajar as pessoas a serem quem elas realmente são, aceitando a si mesmas como elas realmente são, e incentivando-as a cuidarem de si <span>mesmas</span>.</h3>
+                <h1>Quem nós <b>somos</b>?</h1><br>
+                <h3>Nós somos uma pequena empresa familiar, fundada recentemente em <b>Búzios-RJ</b> com o intuito de gerar não somente renda mas também movimentar a economia local, gerar empregos e encorajar as pessoas a serem quem elas realmente são, aceitando a si mesmas como elas realmente são, e incentivando-as a cuidarem de si <b>mesmas</b>.</h3>
             </div>
             <div id="interaction">
                 <RouterLink to="/galeria">
