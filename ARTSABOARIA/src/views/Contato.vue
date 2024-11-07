@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import ContactPage from '../components/Contact/ContactPage.vue'
+</script>
+
 <template>
-    <h1>Está é a contatos</h1>
+    <ContactPage></ContactPage>
 </template>

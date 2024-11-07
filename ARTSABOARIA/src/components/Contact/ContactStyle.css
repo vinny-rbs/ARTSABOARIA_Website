@@ -1,0 +1,20 @@
+@import '../../assets/base.css';
+
+main {
+    height: 100dvh;
+    width: 100dvw;
+}
+
+article {
+    height: 100%;
+    width: 50%;
+}
+
+#title > h1 {
+    font-size: 2.5rem;
+}
+
+aside {
+    height: 100%;
+    width: 50%;
+}
