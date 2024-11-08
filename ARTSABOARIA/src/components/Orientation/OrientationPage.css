@@ -1,0 +1,33 @@
+#container_OrientationPage > main {
+    padding: 100px;
+    display: flex;
+    height: 90dvh;
+    width: 100dvw;
+}
+
+main > article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+main > article > .titles {
+    width: 40em;
+    text-align: center;
+    /*margin-bottom: 4em;*/
+}
+
+main > article > #description {
+    width: 30em;
+    text-align: center;
+}
+
+main > aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}

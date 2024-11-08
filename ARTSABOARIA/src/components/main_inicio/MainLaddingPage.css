@@ -1,6 +1,6 @@
 @import '../../assets/base.css';
 
-main {
+#container_LaddingPage > main {
     height: 90vh;
     width: 100vw;
     display: flex;

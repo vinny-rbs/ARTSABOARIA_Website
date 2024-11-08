@@ -1,6 +1,7 @@
 @import '../../assets/base.css';
 
-main {
+#container_contactPage > main {
+    display: flex;
     height: 90dvh;
     width: 100dvw;
 }
@@ -72,9 +73,9 @@ svg {
     width: 30em;
 }
 
-#contact_button > svg {
-    height: 40px;
-    width: 40px;
+#contact_button > a > svg {
+    height: 2.5em;
+    width: 2.5em;
     cursor: pointer;
 }
 
