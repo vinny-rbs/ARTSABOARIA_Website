@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
     --main-color-white: #F7F6F3;
     --main-color-black: #1E1A1D;
     --main-color-blue: #41A1F7;
+    --main-color-blue-low: #e3f1fe;
     --main-color-orange: #FFA500;
 }
 
@@ -14,19 +13,41 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
 }
 
 body {
     background-color: var(--main-color-white);
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+span {
+    color: var(--main-color-blue);
 }
 
 .router-link-active {
     border-bottom: 2px solid var(--main-color-orange);
 }
 
-span {
-    color: var(--main-color-blue);
+input, textarea {
+    height: 2.25em;
+    width: 30em;
+    border: none;
+    border-radius: 8px;
+    background: var(--main-color-blue);
+    resize: none;
+    color: var(--main-color-black);
 }
 
 button {

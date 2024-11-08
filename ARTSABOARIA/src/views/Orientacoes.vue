@@ -1,3 +1,9 @@
+<script setup lang="ts">
+
+    import OrientationPage from '../components/Orientation/OrientationPage.vue'
+
+</script>
+
 <template>
-    <h1>Está é Orientaçoes</h1>
+    <OrientationPage />
 </template>

@@ -1,20 +1,172 @@
 @import '../../assets/base.css';
 
 main {
-    height: 100dvh;
+    height: 90dvh;
     width: 100dvw;
 }
 
 article {
     height: 100%;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#info_top {
+    width: 35em;
+    margin-bottom: 3em;
+}
+
+#title {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 #title > h1 {
     font-size: 2.5rem;
 }
 
+#description {
+    text-align: center;
+}
+
+svg {
+    height: 50px;
+    width: 50px;
+}
+
+#interactivity_button {
+    padding: 3em;
+    margin-bottom: 3em;
+}
+
+#interactivity_button > button {
+    all: none;
+    border-radius: 16px;
+    border: none;
+    height: 5em;
+    width: 30em;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.025);
+}
+
+#icon_email_field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#icon_email_field > svg {
+    padding: 5px;
+    border: 3px solid var(--main-color-blue);
+    border-radius: 8px;
+    margin-right: 25px;
+}
+
+#contact_button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30em;
+}
+
+#contact_button > svg {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
 aside {
     height: 100%;
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+#card_form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+    width: 75%;
+    border-radius: 23px;
+    box-shadow: 4px 4px 5px 8px rgba(0, 0, 0, 0.025);
+    padding: 25px 75px;
+}
+
+.form_fields > input,textarea {
+    height: 3em;
+    width: 100%;
+    background-color: var(--main-color-blue-low);
+    color: black;
+    padding: 15px;
+}
+
+.form_fields > input::placeholder,textarea::placeholder {
+    color: rgba(30, 26, 29, 0.55);
+}
+
+.form_fields > input:focus,textarea:focus {
+    outline: none;
+    border: 2px solid var(--main-color-blue);
+}
+
+.form_fields > textarea {
+    height: 8em;
+}
+
+#card_form > h1 {
+    margin-bottom: 1.5em;
+}
+
+.form_fields {
+    width: 30em;
+    height: auto;
+    margin-bottom: 3em;
+}
+
+#form_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form_container > input[type=submit] {
+    background-color: var(--main-color-white);
+    border: 3px solid var(--main-color-blue);
+    width: 10em;
+    height: 3em;
+    border-radius: 23px;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px 8px rgba(0, 0, 0, 0.025);
+    color: var(--main-color-blue);
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: all 0.25s ease-in;
+}
+
+#form_container > input[type=submit]:hover {
+    color: #fff;
+    background-color: var(--main-color-blue);
+    font-weight: bolder;
+    border: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

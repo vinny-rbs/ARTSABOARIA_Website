@@ -3,5 +3,5 @@ import ContactPage from '../components/Contact/ContactPage.vue'
 </script>
 
 <template>
-    <ContactPage></ContactPage>
+    <ContactPage />
 </template>
