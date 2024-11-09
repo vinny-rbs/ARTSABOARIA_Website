@@ -5,6 +5,10 @@
     width: 100dvw;
 }
 
+#container_OrientationPage > main > article, aside {
+    padding: 5em;
+}
+
 main > article {
     display: flex;
     justify-content: center;
@@ -30,4 +34,9 @@ main > aside {
     align-items: center;
     height: 100%;
     width: 50%;
+}
+
+#container_OrientationPage > main > aside > img {
+    height: 100%;
+    width: 100%;
 }
