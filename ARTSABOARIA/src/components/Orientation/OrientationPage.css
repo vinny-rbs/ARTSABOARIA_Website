@@ -20,12 +20,13 @@ main > article {
 main > article > .titles {
     width: 40em;
     text-align: center;
-    /*margin-bottom: 4em;*/
+    margin-bottom: 2em;
 }
 
 main > article > #description {
     width: 30em;
     text-align: center;
+    margin-bottom: 5em;
 }
 
 main > aside {

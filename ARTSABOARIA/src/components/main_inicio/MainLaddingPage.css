@@ -25,13 +25,16 @@ aside {
 }
 
 aside > img {
-    width: 500px;
-    height: 650px;
+    width: 70%;
     border-radius: 23px;
 }
 
 #text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 650px;
     font-size: 20px;
     padding-bottom: 100px;
@@ -41,7 +44,8 @@ h1 {
     font-family: 'Nunito', sans-serif;
 }
 
-h3 {
+#text > h3 {
+    width: 32em;
     font-family: 'Nunito', sans-serif;
     font-weight: 400;
 }

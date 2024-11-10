@@ -2,12 +2,18 @@
 
     import './OrientationPage.css'
 
+    import { createScrollRevealDirective } from 'vue-scroll-reveal'; 
+        const vScrollReveal = createScrollRevealDirective({
+        delay: 1000,
+        duration: 150,
+    });
+
 </script>
 
 <template>
     <div id="container_OrientationPage">
         <main>
-            <article>
+            <article v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'left', scale: 1.2}">
                 <div class="titles">
                     <h1>Como posso fazer o descarte consiente dos meus <span>sabonetes</span>.</h1>
                 </div>
@@ -25,7 +31,7 @@
                     <li>Evite embalagens desnecessárias</li>
                 </ol>
             </article>
-            <aside>
+            <aside v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'right', scale: 1.2}">
                 <img src="../../assets/images/Imagem ilustrativa.svg" alt="">
             </aside>
         </main>

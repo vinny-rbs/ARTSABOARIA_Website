@@ -25,7 +25,7 @@ h1 {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 p {
@@ -68,4 +68,24 @@ button:hover {
     background-color: var(--main-color-blue);
     font-weight: bolder;
     border: #fff;
+}
+
+/*Responsividade*/
+
+@media (max-width: 1550px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p,li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 1250px) {
+    
 }
