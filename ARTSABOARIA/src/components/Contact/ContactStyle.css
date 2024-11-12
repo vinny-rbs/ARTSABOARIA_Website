@@ -60,6 +60,13 @@ svg {
     border: 3px solid var(--main-color-blue);
     border-radius: 8px;
     margin-right: 25px;
+    
+}
+
+
+ #copy_button:hover > #icon_email_field > svg > path, #copy_button:hover > #icon_email_field > svg {
+    fill: white;
+    border-color: var(--main-color-white);
 }
 
 #contact_button {

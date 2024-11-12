@@ -11,7 +11,7 @@
 </script>
 
 <template>
-    <header v-scroll-reveal="{origin: 'top', reset: false, delay: 1000, duration: 1000, distance: '150px',}">
+    <header v-scroll-reveal="{origin: 'top', delay: 1000, duration: 1000, distance: '150px',}">
         <div id="logo">
             <RouterLink to="/">
                 <img src="../Header/Icons/bubble icon.png" alt="" id="logo_icon">

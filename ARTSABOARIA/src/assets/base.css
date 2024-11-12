@@ -72,7 +72,7 @@ button:hover {
 
 /*Responsividade*/
 
-@media (max-width: 1550px) {
+@media (max-width: 1350px) {
     h1 {
         font-size: 1.75rem;
     }

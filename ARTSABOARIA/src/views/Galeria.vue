@@ -1,3 +1,9 @@
+<script setup lang="ts">
+
+    import GaleryPage from '@/components/Galery/GaleryPage.vue';
+
+</script>
+
 <template>
-    <h1>Está é a Galeria</h1>
+    <GaleryPage />
 </template>

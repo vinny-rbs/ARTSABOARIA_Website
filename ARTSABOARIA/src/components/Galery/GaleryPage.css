@@ -1,0 +1,8 @@
+#container_GaleryPage {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    width: 100dvw;
+    justify-content: center;
+    align-items: center;
+}

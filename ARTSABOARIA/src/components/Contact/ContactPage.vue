@@ -1,6 +1,7 @@
 <script setup lang="ts">
     import './ContactStyle.css';
-    import './Form.js'
+    import './script/Form.js';
+    import './script/interactivy.js';
 
     import { createScrollRevealDirective } from 'vue-scroll-reveal'; 
         const vScrollReveal = createScrollRevealDirective({
@@ -23,9 +24,9 @@
                     </div>
                 </div>
                 <div id="interactivity_button">
-                    <button id="copy_button" onclick="CopyText()">
+                    <button id="copy_button" value="ola">
                         <div id="icon_email_field">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#41a1f7" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="#41a1f7" d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"/></svg>
                             <h3>artsaboaria2024@gmail.com</h3>
                         </div>
                     </button>
@@ -45,7 +46,7 @@
             <aside v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'bottom'}">
                 <div id="card_form">
                     <h1>Mande uma Mensagem</h1>
-                    <form action="" id="forms">
+                    <form action="https://formsubmit.co/artsaboaria2024@gmail.com" method="POST" id="forms">
                         <div id="form_container">
                             <div class="form_fields">
                                 <input type="text" placeholder="Nome Completo" maxlength="100" id="nome" required>
