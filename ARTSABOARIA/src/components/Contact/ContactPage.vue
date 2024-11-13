@@ -61,6 +61,9 @@
                                 <textarea placeholder="Mensagem" minlength="50" maxlength="500" id="mensagem" required></textarea>
                             </div>
                             <input type="submit" value="Enviar">
+                            <input type="hidden" name="_subject" value="Novo Contato!">
+                            <input type="text" name="_honey" style="display:none">
+                            <input type="hidden" name="_captcha" value="false">
                         </div>
                     </form>
                 </div>

@@ -9,6 +9,7 @@
     <div id="container_GaleryPage">
         <div class="title">
             <h1>GALERIA</h1>
+            <h1>Teste</h1>
         </div>
         <div id="search_field">
             <input type="search">
