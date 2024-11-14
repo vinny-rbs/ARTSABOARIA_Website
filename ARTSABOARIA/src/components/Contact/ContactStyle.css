@@ -63,7 +63,6 @@ svg {
     
 }
 
-
  #copy_button:hover > #icon_email_field > svg > path, #copy_button:hover > #icon_email_field > svg {
     fill: white;
     border-color: var(--main-color-white);

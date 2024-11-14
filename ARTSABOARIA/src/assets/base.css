@@ -5,7 +5,7 @@
     --main-color-black: #1E1A1D;
     --main-color-blue: #41A1F7;
     --main-color-blue-low: #e3f1fe;
-    --main-color-orange: #FFA500;
+    --main-color-orange: #ffba08;
 }
 
 * {
@@ -45,7 +45,6 @@ input, textarea {
     width: 30em;
     border: none;
     border-radius: 8px;
-    background: var(--main-color-blue);
     resize: none;
     color: var(--main-color-black);
 }
