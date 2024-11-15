@@ -1,6 +1,6 @@
 <script>
     import './GaleryPage.css';
-
+    import './scripts/ArtApi.js';
 </script>
 
 <template>
@@ -19,86 +19,7 @@
         </div>
         <div id="grid_product">
             <!--Cards-->
-            <div class="card_product">
-                <div id="info_top_card">
-                    <img src="https://images.pexels.com/photos/10853724/pexels-photo-10853724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-                <div id="info_bottom_card">
-                    <div id="description">
-                        <h3>Sabonete de Rosas Vermelhas</h3>
-                        <p><span id="gray_caption">Sabonetes de frutas tropicais</span></p>
-                        <p>Quantidade em estoque: <span id="orange_caption">20</span></p>
-                    </div>
-                    <div id="interactivity">
-                        <button>Comprar</button>
-                        <h3>R$ <span id="orange_caption">25,90</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="card_product">
-                <div id="info_top_card">
-                    <img src="https://images.pexels.com/photos/10853724/pexels-photo-10853724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-                <div id="info_bottom_card">
-                    <div id="description">
-                        <h3>Sabonete de Rosas Vermelhas</h3>
-                        <p><span id="gray_caption">Sabonetes de frutas tropicais</span></p>
-                        <p>Quantidade em estoque: <span id="orange_caption">20</span></p>
-                    </div>
-                    <div id="interactivity">
-                        <button>Comprar</button>
-                        <h3>R$ <span id="orange_caption">25,90</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="card_product">
-                <div id="info_top_card">
-                    <img src="https://images.pexels.com/photos/10853724/pexels-photo-10853724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-                <div id="info_bottom_card">
-                    <div id="description">
-                        <h3>Sabonete de Rosas Vermelhas</h3>
-                        <p><span id="gray_caption">Sabonetes de frutas tropicais</span></p>
-                        <p>Quantidade em estoque: <span id="orange_caption">20</span></p>
-                    </div>
-                    <div id="interactivity">
-                        <button>Comprar</button>
-                        <h3>R$ <span id="orange_caption">25,90</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="card_product">
-                <div id="info_top_card">
-                    <img src="https://images.pexels.com/photos/10853724/pexels-photo-10853724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-                <div id="info_bottom_card">
-                    <div id="description">
-                        <h3>Sabonete de Rosas Vermelhas</h3>
-                        <p><span id="gray_caption">Sabonetes de frutas tropicais</span></p>
-                        <p>Quantidade em estoque: <span id="orange_caption">20</span></p>
-                    </div>
-                    <div id="interactivity">
-                        <button>Comprar</button>
-                        <h3>R$ <span id="orange_caption">25,90</span></h3>
-                    </div>
-                </div>
-            </div>
-            <div class="card_product">
-                <div id="info_top_card">
-                    <img src="https://images.pexels.com/photos/10853724/pexels-photo-10853724.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                </div>
-                <div id="info_bottom_card">
-                    <div id="description">
-                        <h3>Sabonete de Rosas Vermelhas</h3>
-                        <p><span id="gray_caption">Sabonetes de frutas tropicais</span></p>
-                        <p>Quantidade em estoque: <span id="orange_caption">20</span></p>
-                    </div>
-                    <div id="interactivity">
-                        <button>Comprar</button>
-                        <h3>R$ <span id="orange_caption">25,90</span></h3>
-                    </div>
-                </div>
-            </div> 
+
             <!--Final Card-->
         </div>
     </div>
