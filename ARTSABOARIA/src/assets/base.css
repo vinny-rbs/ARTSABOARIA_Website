@@ -5,7 +5,7 @@
     --main-color-black: #1E1A1D;
     --main-color-blue: #41A1F7;
     --main-color-blue-low: #e3f1fe;
-    --main-color-orange: #ffba08;
+    --main-color-orange: #FFA500;
 }
 
 * {
@@ -67,6 +67,11 @@ button:hover {
     background-color: var(--main-color-blue);
     font-weight: bolder;
     border: #fff;
+}
+
+button:active {
+    transform: scale(0.95);
+    transition: all 0.1s ease-in-out;
 }
 
 /*Responsividade*/

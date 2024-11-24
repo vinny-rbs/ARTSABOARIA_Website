@@ -1,13 +1,5 @@
 <script setup lang="ts">
-
     import './OrientationPage.css'
-
-    import { createScrollRevealDirective } from 'vue-scroll-reveal'; 
-        const vScrollReveal = createScrollRevealDirective({
-        delay: 1000,
-        duration: 150,
-    });
-
 </script>
 
 <template>

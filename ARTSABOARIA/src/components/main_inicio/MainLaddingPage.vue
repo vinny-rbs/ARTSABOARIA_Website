@@ -1,13 +1,6 @@
 <script setup lang="ts">
     import { RouterLink, RouterView } from 'vue-router'
     import '../main_inicio/MainLaddingPage.css'
-
-    import { createScrollRevealDirective } from 'vue-scroll-reveal'; 
-    const vScrollReveal = createScrollRevealDirective({
-    delay: 1000,
-    duration: 150,
-});
-
 </script>
 
 <template>
@@ -30,4 +23,4 @@
         </main>
     </div>
     <RouterView />
-</template>
+</template> 
