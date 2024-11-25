@@ -1,15 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 import { createScrollRevealDirective } from 'vue-scroll-reveal';
 
-const app = createApp(App)
+const app = createApp(App);
 
-app.use(router)
+app.use(router);
 
-app.mount('#app')
-
-// Criar a diretiva globalmente
 const vScrollReveal = createScrollRevealDirective({
   delay: 1000,
   duration: 150,
@@ -17,3 +14,4 @@ const vScrollReveal = createScrollRevealDirective({
 
 app.directive('scroll-reveal', vScrollReveal);
 
+app.mount('#app');

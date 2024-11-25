@@ -1,4 +1,4 @@
-@import '../../assets/base.css';
+@import '../../../assets/base.css';
 
 header {
     display: flex;
@@ -28,7 +28,7 @@ header {
 nav {
     display: flex;
     justify-content: space-around;
-    width: 800px;
+    width: 50em;
 }
 
 nav > a {
@@ -39,6 +39,30 @@ nav > a {
     text-decoration-color: transparent;
 }
 
-#categorias {
+#menu_button {
+    width: 3em;
+    height: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hamburguer {
+    display: none;
+    width: 3em;
+    height: 3px;
+    border-radius: 0px;
+    border: none;
+    background: none;
+    border-top: 4px solid var(--main-color-blue);
     margin: 0;
+}
+
+#hamburguer::before, #hamburguer::after {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 4px;
+    background: var(--main-color-blue);
+    margin-top: .5em;
 }

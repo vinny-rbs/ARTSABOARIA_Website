@@ -1,5 +1,5 @@
 <script>
-import './GaleryPage.css';
+import './styles/GaleryPage.css';
 import ScrollReveal from 'scrollreveal';
 
 export default {

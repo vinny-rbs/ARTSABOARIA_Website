@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import './OrientationPage.css'
+    import './styles/OrientationPage.css'
 </script>
 
 <template>

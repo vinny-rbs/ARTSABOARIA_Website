@@ -1,14 +1,19 @@
 <script setup lang="ts">
     import { RouterLink, RouterView } from 'vue-router'
-    import '../main_inicio/MainLaddingPage.css'
+    import '../main_inicio/styles/MainLaddingPage.css'
+    import '../main_inicio/styles/MainLaddingPageResponsive.css'
+    import { ref } from 'vue';
+    const menuAtivo = ref(false);
 </script>
 
 <template>
-    <div id="container_LaddingPage">
+    <div id="container_LaddingPage" v-if="!menuAtivo">
         <main>
             <section v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'left'}">
                 <div id="text">
-                    <h1>Quem nós <span>somos</span>?</h1><br>
+                    <div id="title">
+                        <h1>Quem nós <span>somos</span>?</h1>
+                    </div>
                     <h3>Nós somos uma pequena empresa familiar, fundada recentemente em <span>Búzios-RJ</span> com o intuito de gerar não somente renda mas também movimentar a economia local, gerar empregos e encorajar as pessoas a serem quem elas realmente são, aceitando a si mesmas como elas realmente são, e incentivando-as a cuidarem de si <span>mesmas</span>.</h3>
                 </div>
                 <div id="interaction">

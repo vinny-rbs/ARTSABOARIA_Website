@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import './ContactStyle.css';
+    import './styles/ContactStyle.css';
     import './script/Form.js';
     import './script/interactivy.js';
 

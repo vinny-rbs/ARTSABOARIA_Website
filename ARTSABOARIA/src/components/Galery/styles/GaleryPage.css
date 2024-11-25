@@ -1,4 +1,4 @@
-@import '../../assets/base.css';
+@import '../../../assets/base.css';
 
 input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;

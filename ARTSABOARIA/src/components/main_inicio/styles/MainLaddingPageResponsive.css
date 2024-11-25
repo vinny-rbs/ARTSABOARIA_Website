@@ -1,0 +1,24 @@
+/*Tablets*/
+@media (max-width: 880px) and (max-height: 1280px) {
+
+    #container_LaddingPage {
+        z-index: 999;
+    }
+
+    #container_LaddingPage > main {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #container_LaddingPage > main > aside {
+        display: none;
+    }
+}
+
+/*Celular*/
+@media (max-width: 428px) and (max-height: 926px) {
+    #text > h3 {
+        width: 20em;
+    }
+}
