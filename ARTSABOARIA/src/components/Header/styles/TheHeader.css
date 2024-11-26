@@ -16,13 +16,13 @@ header {
 }
 
 #logo_icon {
-    width: 60px;
-    height: 60px;
+    width: 3.75em;
+    height: 3.75em;
 }
 
 #logo_text {
-    width: 250px;
-    height: 60px;
+    width: 15em;
+    height: 3.75em;
 }
 
 nav {

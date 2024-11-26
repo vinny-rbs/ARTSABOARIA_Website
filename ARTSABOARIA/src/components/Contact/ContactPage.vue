@@ -2,11 +2,13 @@
     import './styles/ContactStyle.css';
     import './script/Form.js';
     import './script/interactivy.js';
+    import { inject } from 'vue';
+    const menuAtivo = inject('menuAtivo');
 
 </script>
 
 <template>
-    <div id="container_contactPage">
+    <div id="container_contactPage" v-if="!menuAtivo">
         <main>
             <article v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'top'}">
                 <div id="info_top">

@@ -1,9 +1,11 @@
 <script setup lang="ts">
     import './styles/OrientationPage.css'
+    import { inject } from 'vue';
+    const menuAtivo = inject('menuAtivo');
 </script>
 
 <template>
-    <div id="container_OrientationPage">
+    <div id="container_OrientationPage" v-if="!menuAtivo">
         <main>
             <article v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'left', scale: 1.2}">
                 <div class="titles">

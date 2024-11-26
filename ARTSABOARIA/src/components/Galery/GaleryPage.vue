@@ -1,8 +1,21 @@
 <script>
 import './styles/GaleryPage.css';
 import ScrollReveal from 'scrollreveal';
+import { inject, toRef } from 'vue';
+const menuAtivo = inject('menuAtivo');
+
+
 
 export default {
+    setup() {
+        // Torna o menuAtivo reativo ao usar inject
+        const menuAtivo = toRef(inject('menuAtivo'));
+
+        return {
+            menuAtivo,
+        };
+    },
+
     data() {
         return {
             products: [], // Lista para armazenar os produtos da API
@@ -52,12 +65,11 @@ export default {
         },
     },
 };
+
 </script>
 
-
-
 <template>
-    <div id="container_GaleryPage">
+    <div id="container_GaleryPage" v-if="!menuAtivo">
         <div id="info_top_GaleryPage">
             <div class="title">
                 <h1>GALERIA</h1>

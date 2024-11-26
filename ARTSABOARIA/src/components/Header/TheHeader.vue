@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router';
-import { ref } from 'vue';
+import { ref, provide } from 'vue';
 import '../Header/styles/TheHeader.css';
 import '../Header/styles/TheHeaderResponsive.css';
 import { createScrollRevealDirective } from 'vue-scroll-reveal';
@@ -11,15 +11,14 @@ const vScrollReveal = createScrollRevealDirective({
   duration: 150,
 });
 
-// Estado reativo para controle do menu
+// Variável global
 const menuAtivo = ref(false);
 
 // Método para alternar o estado do menu
 const toggleMenu = () => {
   menuAtivo.value = !menuAtivo.value;
 };
-
-defineProps(["menuAtivo"]);
+provide('menuAtivo', menuAtivo);
 
 </script>
 
@@ -39,7 +38,7 @@ defineProps(["menuAtivo"]);
         <button id="hamburguer" @click="toggleMenu"></button>
       </div>
   
-      <div class="categoria">
+      <div class="categoria" v-if="menuAtivo">
         <!-- Navegação com classe ativa no menu -->
         <nav>
           <RouterLink to="/">Ínicio</RouterLink>

@@ -79,9 +79,26 @@
     .nav #hamburguer span {
         opacity: 0;
     }
+
+    #logo_icon {
+        width: 3em;
+        height: 3em;
+    }
+    
+    #logo_text {
+        width: 15em;
+        height: 3em;
+    }
 }
 
 /* Celular */
 @media (max-width: 428px) and (max-height: 926px) {
-    /* Reutilize os mesmos estilos do tablet */
+    #logo_icon {
+        width: 3em;
+        height: 3em;
+    }
+    
+    #logo_text {
+        display: none;
+    }
 }

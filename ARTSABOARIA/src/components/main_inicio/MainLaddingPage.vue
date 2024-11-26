@@ -2,8 +2,8 @@
     import { RouterLink, RouterView } from 'vue-router'
     import '../main_inicio/styles/MainLaddingPage.css'
     import '../main_inicio/styles/MainLaddingPageResponsive.css'
-    import { ref } from 'vue';
-    const menuAtivo = ref(false);
+    import { inject } from 'vue';
+    const menuAtivo = inject('menuAtivo');
 </script>
 
 <template>
