@@ -1,5 +1,6 @@
 <script setup lang="ts">
     import './styles/ContactStyle.css';
+    import './styles/ContactStyleResponsive.css';
     import './script/Form.js';
     import './script/interactivy.js';
     import { inject } from 'vue';

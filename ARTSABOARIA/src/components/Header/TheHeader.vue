@@ -38,7 +38,7 @@ provide('menuAtivo', menuAtivo);
         <button id="hamburguer" @click="toggleMenu"></button>
       </div>
   
-      <div class="categoria" v-if="menuAtivo">
+      <div class="categoria">
         <!-- Navegação com classe ativa no menu -->
         <nav>
           <RouterLink to="/">Ínicio</RouterLink>

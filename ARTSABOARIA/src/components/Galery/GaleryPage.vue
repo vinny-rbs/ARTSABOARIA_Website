@@ -1,5 +1,6 @@
 <script>
 import './styles/GaleryPage.css';
+import './styles/GaleryPageResponsive.css';
 import ScrollReveal from 'scrollreveal';
 import { inject, toRef } from 'vue';
 const menuAtivo = inject('menuAtivo');

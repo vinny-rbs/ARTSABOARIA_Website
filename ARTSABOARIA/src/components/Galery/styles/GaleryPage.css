@@ -13,6 +13,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 5em;
     overflow-y: auto;
     font-family: 'Inter', sans-serif;
+    padding-bottom: 9em;
 }
 
 #info_top_GaleryPage {
@@ -82,7 +83,6 @@ input[type="search"]::-webkit-search-cancel-button {
     grid-template-rows: auto;
     gap: 3em;
     padding-top: 5em;
-
 }
 
 .card_product {

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-    import './styles/OrientationPage.css'
+    import './styles/OrientationPage.css';
+    import './styles/OrientationPageResponsive.css';
     import { inject } from 'vue';
     const menuAtivo = inject('menuAtivo');
 </script>

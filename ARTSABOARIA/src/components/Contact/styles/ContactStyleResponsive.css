@@ -1,0 +1,25 @@
+@media (max-width: 880px) and (max-height: 1280px) {
+    #container_contactPage > main {
+        flex-direction: column;
+        overflow-y: auto;
+        padding-bottom: 3em;
+    }
+    #container_contactPage > main > article {
+        width: 100%;
+        padding: 3em;
+    }
+    #container_contactPage > main > aside {
+        width: 100%;
+        padding: 3em;
+    }
+
+    #card_form {
+        width: 85%;
+        height: 100%;
+    }
+
+    .form_fields > input, textarea {
+        height: 3.5em;
+        font-size: 1rem;
+    }
+}
