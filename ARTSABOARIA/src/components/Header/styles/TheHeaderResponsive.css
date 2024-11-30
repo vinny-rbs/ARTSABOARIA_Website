@@ -4,6 +4,7 @@
     header {
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
 
     /* Menu inicial oculto com clip-path */
@@ -23,6 +24,12 @@
         pointer-events: none;
         transition: clip-path 0.9s ease, pointer-events 0.6s ease;
         z-index: 1000;
+    }
+
+    #menu_button {
+        position: absolute;
+        left: 80%;
+        top: 45%;
     }
 
     /* Menu ativo com animação de expansão */
