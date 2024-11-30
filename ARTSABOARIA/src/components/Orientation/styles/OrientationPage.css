@@ -41,3 +41,7 @@ main > aside {
     height: 100%;
     width: 100%;
 }
+
+#container_OrientationPage > main > aside > #qrcode {
+    display: none;
+}

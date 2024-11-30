@@ -1,9 +1,20 @@
 @media (max-width: 880px) and (max-height: 1280px) {
+    main {
+        flex-direction: column;
+    }
     #container_OrientationPage > main > article {
         width: 100%;
     }
-    #container_OrientationPage > main > aside {
+    #container_OrientationPage > main > aside > #person_orientation, #info_bottom_OrientationPage {
         display: none;
+    }
+    #container_OrientationPage > main > aside > #qrcode {
+        display: block;
+        width: 100%;
+    }
+    #container_OrientationPage > main > aside {
+        width: 100%;
+        padding: 5em;
     }
 }
 
