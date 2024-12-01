@@ -1,4 +1,4 @@
-@import '../../assets/base.css';
+@import '../../../assets/base.css';
 
 #container_LaddingPage > main {
     height: 90vh;
@@ -35,9 +35,8 @@ aside > img {
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 650px;
-    font-size: 20px;
-    padding-bottom: 100px;
+    width: 40em;
+    padding-bottom: 6em;
 }
 
 h1 {

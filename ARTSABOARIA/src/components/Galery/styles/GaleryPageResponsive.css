@@ -1,0 +1,54 @@
+@media (max-width: 880px) and (max-height: 1280px) {
+    .card_product {
+        width: 20em;
+        height: 32em;
+        border-radius: 23px;
+    }
+    #grid_product {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2em;
+        padding-top: 5em;
+    }
+
+    #container_GaleryPage {
+        padding: 4em;
+        padding-bottom: 9em;
+    }
+
+    #info_bottom_card > #description > h3 {
+        font-weight: 300;
+        width: 14em;
+    }
+
+    #info_bottom_card > #description > p {
+        width: 14em;
+    }
+    
+    #info_bottom_card > #interactivity {
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        height: calc(29em / 3);
+    }
+
+}
+
+@media (max-width: 428px) and (max-height: 926px) {
+    #search_field > input {
+        width: 90%;
+    }
+    #search_field > button {
+        left: 40%;
+    }
+    #grid_product {
+        padding-top: 7em;
+        grid-template-columns: 1fr;
+    }
+    #container_GaleryPage {
+        padding: 2em;
+    }
+    .card_product {
+        width: 100%;
+    }
+}

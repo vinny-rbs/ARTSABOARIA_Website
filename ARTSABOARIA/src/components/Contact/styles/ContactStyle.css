@@ -1,4 +1,4 @@
-@import '../../assets/base.css';
+@import '../../../assets/base.css';
 
 #container_contactPage > main {
     display: flex;
@@ -45,14 +45,26 @@ svg {
     border: none;
     height: 5em;
     width: 30em;
-    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.025);
+    box-shadow: 1px 3px 4px 4px rgba(0, 0, 0, 0.050);
+}
+
+#copy_button {
+    background-color: transparent;
+    color: var(--main-color-blue);
+}
+
+#copy_button:hover {
+    background-color: var(--main-color-blue);
+}
+
+#copy_button:hover > #icon_email_field > h3{
+    color: var(--main-color-white);
 }
 
 #icon_email_field {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
 }
 
 #icon_email_field > svg {
@@ -63,10 +75,10 @@ svg {
     
 }
 
-
  #copy_button:hover > #icon_email_field > svg > path, #copy_button:hover > #icon_email_field > svg {
     fill: white;
     border-color: var(--main-color-white);
+    color: var(--main-color-white);
 }
 
 #contact_button {
@@ -80,6 +92,12 @@ svg {
     height: 2.5em;
     width: 2.5em;
     cursor: pointer;
+    transition: 0.25s all ease-in-out;
+}
+
+#contact_button > a > svg:hover {
+    filter: brightness(110%);
+    transform: scale(1.1);
 }
 
 aside {
@@ -94,11 +112,11 @@ aside {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 70dvh;
-    width: 35dvw;
+    height: 95%;
+    width: 90%;
     border-radius: 23px;
     box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.025);
-    padding: 25px 75px;
+    padding: 2em;
 }
 
 #forms {
@@ -147,24 +165,22 @@ aside {
 }
 
 #form_container > input[type=submit] {
-    background-color: var(--main-color-white);
-    border: 3px solid var(--main-color-blue);
+    background-color: var(--main-color-blue);
+    border: none;
     width: 10em;
     height: 3em;
     border-radius: 23px;
     cursor: pointer;
     box-shadow: 4px 4px 5px 8px rgba(0, 0, 0, 0.025);
-    color: var(--main-color-blue);
+    color: var(--main-color-white);
     font-weight: bold;
     font-size: 0.9rem;
     transition: all 0.25s ease-in;
 }
 
 #form_container > input[type=submit]:hover {
-    color: #fff;
-    background-color: var(--main-color-blue);
-    font-weight: bolder;
-    border: #fff;
+    filter: brightness(110%);
+    transform: scale(1.05);
 }
 
 

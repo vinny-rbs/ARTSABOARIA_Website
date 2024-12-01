@@ -1,0 +1,24 @@
+@media (max-width: 880px) and (max-height: 1280px) {
+    main {
+        flex-direction: column;
+    }
+    #container_OrientationPage > main > article {
+        width: 100%;
+    }
+    #container_OrientationPage > main > aside {
+        display: none;
+    }
+}
+
+@media (max-width: 428px) and (max-height: 926px) {
+    main > article > .titles, main > article > #description, #info_bottom_OrientationPage {
+        display: flex;
+        flex-direction: column;
+        width: 20em;
+        justify-content: center;
+        align-items: center;
+    }
+    #info_bottom_OrientationPage > .titles {
+        padding-bottom: 2em;
+    }
+}

@@ -1,17 +1,12 @@
 <script setup lang="ts">
-
-    import './OrientationPage.css'
-
-    import { createScrollRevealDirective } from 'vue-scroll-reveal'; 
-        const vScrollReveal = createScrollRevealDirective({
-        delay: 1000,
-        duration: 150,
-    });
-
+    import './styles/OrientationPage.css';
+    import './styles/OrientationPageResponsive.css';
+    import { inject } from 'vue';
+    const menuAtivo = inject('menuAtivo');
 </script>
 
 <template>
-    <div id="container_OrientationPage">
+    <div id="container_OrientationPage" v-if="!menuAtivo">
         <main>
             <article v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'left', scale: 1.2}">
                 <div class="titles">
@@ -20,19 +15,21 @@
                 <div id="description">
                     <p>Uma iniciativa da <span>ARTSABOARIA LTDA</span>, com o proposito de diminuir o descarte incorreto dos sabonetes que provoca danos para o meio ambiente</p>
                 </div>
-                <div class="titles">
-                    <h1>Formas devidas</h1>
+                <div id="info_bottom_OrientationPage">
+                    <div class="titles">
+                        <h1>Formas devidas</h1>
+                    </div>
+                    <ol start="1">
+                        <li>Usar o sabonete até o fim</li>
+                        <li>Reciclar o sabonete</li>
+                        <li>Compostagem</li>
+                        <li>Reutilização criativa</li>
+                        <li>Evite embalagens desnecessárias</li>
+                    </ol>
                 </div>
-                <ol start="1">
-                    <li>Usar o sabonete até o fim</li>
-                    <li>Reciclar o sabonete</li>
-                    <li>Compostagem</li>
-                    <li>Reutilização criativa</li>
-                    <li>Evite embalagens desnecessárias</li>
-                </ol>
             </article>
             <aside v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'right', scale: 1.2}">
-                <img src="../../assets/images/Imagem ilustrativa.svg" alt="">
+                <img src="../../assets/images/Imagem ilustrativa.svg" alt="" id="person_orientation">
             </aside>
         </main>
     </div>
