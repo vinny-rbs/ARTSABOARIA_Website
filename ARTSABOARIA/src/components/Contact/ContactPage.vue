@@ -43,7 +43,7 @@
             <aside v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'bottom'}">
                 <div id="card_form">
                     <h1>Mande uma Mensagem</h1>
-                    <form action="https://formsubmit.co/artsaboaria2024@gmail.com" method="POST" id="forms">
+                    <form action="#" method="POST" id="forms">
                         <div id="form_container">
                             <div class="form_fields">
                                 <input type="text" placeholder="Nome Completo" maxlength="100" id="nome" required>
@@ -58,9 +58,6 @@
                                 <textarea placeholder="Mensagem" minlength="50" maxlength="500" id="mensagem" required></textarea>
                             </div>
                             <input type="submit" value="Enviar">
-                            <input type="hidden" name="_subject" value="Novo Contato!">
-                            <input type="text" name="_honey" style="display:none">
-                            <input type="hidden" name="_captcha" value="false">
                         </div>
                     </form>
                 </div>
