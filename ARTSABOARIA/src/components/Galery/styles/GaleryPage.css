@@ -89,7 +89,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 24em;
     height: 29em;
     border-radius: 23px;
-    box-shadow: 5px 5px 8px 8px rgba(0, 0, 0, 0.025);
+    box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.075);
     overflow: hidden;
     transition: all, transform 0.8s ease-in-out;
     animation: opacity 1.25s ease-in-out;
@@ -132,16 +132,10 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 
 #info_bottom_card > #interactivity > button {
-    border-color: var(--main-color-orange);
-    color: var(--main-color-orange);
-    background-color: transparent;
+    color: var(--main-color-white);
+    background-color: var(--main-color-orange);
     font-weight: bolder;
     font-size: 1.1rem;
-}
-
-#info_bottom_card > #interactivity > button:hover {
-    background-color: var(--main-color-orange);
-    color: var(--main-color-white);
 }
 
 #info_bottom_card > #interactivity > h3 {

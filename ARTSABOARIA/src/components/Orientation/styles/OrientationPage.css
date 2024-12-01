@@ -1,8 +1,8 @@
 #container_OrientationPage > main {
-    padding: 100px;
     display: flex;
     height: 90dvh;
     width: 100dvw;
+    padding: 2em;
 }
 
 #container_OrientationPage > main > article, aside {

@@ -10,7 +10,8 @@
     }
     #container_contactPage > main > aside {
         width: 100%;
-        padding: 3em;
+        padding: 1em 3em;
+        margin-bottom: 3em;
     }
 
     #card_form {
@@ -21,5 +22,14 @@
     .form_fields > input, textarea {
         height: 3.5em;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 428px) and (max-height: 926px) {
+    #info_top, #interactivity_button > button, #contact_button {
+        width: 20em;
+    }
+    #card_form {
+        width: 100%;
     }
 }

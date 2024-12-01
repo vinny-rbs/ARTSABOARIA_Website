@@ -36,13 +36,19 @@
 
 @media (max-width: 428px) and (max-height: 926px) {
     #search_field > input {
-        width: 20em;
+        width: 90%;
     }
     #search_field > button {
-        left: 9em;
+        left: 40%;
     }
     #grid_product {
         padding-top: 7em;
         grid-template-columns: 1fr;
+    }
+    #container_GaleryPage {
+        padding: 2em;
+    }
+    .card_product {
+        width: 100%;
     }
 }

@@ -30,7 +30,6 @@
             </article>
             <aside v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'right', scale: 1.2}">
                 <img src="../../assets/images/Imagem ilustrativa.svg" alt="" id="person_orientation">
-                <img src="../../assets/images/QR code.svg" alt="" id="qrcode">
             </aside>
         </main>
     </div>
