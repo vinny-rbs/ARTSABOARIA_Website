@@ -23,7 +23,7 @@ body {
 }
 
 main {
-    overflow: none;
+    overflow: hidden;
 }
 
 h1 {
