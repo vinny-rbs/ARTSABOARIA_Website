@@ -45,3 +45,13 @@ main > aside {
 #container_OrientationPage > main > aside > #qrcode {
     display: none;
 }
+
+@keyframes opacity{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }

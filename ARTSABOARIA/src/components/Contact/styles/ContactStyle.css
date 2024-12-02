@@ -183,7 +183,15 @@ aside {
     transform: scale(1.05);
 }
 
-
+@keyframes opacity{
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
 
 
 

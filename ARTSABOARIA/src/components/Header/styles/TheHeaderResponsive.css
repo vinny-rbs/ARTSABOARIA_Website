@@ -98,6 +98,8 @@
     }
     nav > a {
         font-size: 1.75rem;
+        font-weight: bold;
+        font-family: 'Nunito', sans-serif;
     }
 }
 
