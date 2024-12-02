@@ -41,11 +41,11 @@ provide('menuAtivo', menuAtivo);
       <div class="categoria">
         <!-- Navegação com classe ativa no menu -->
         <nav>
-          <RouterLink to="/">Ínicio</RouterLink>
-          <RouterLink to="/galeria">Galeria</RouterLink>
-          <RouterLink to="/contato">Contatos</RouterLink>
-          <RouterLink to="/orientacoes">Orientações</RouterLink>
-          <RouterLink to="/a">Perfil</RouterLink>
+          <RouterLink to="/" @click="toggleMenu">Ínicio</RouterLink>
+          <RouterLink to="/galeria" @click="toggleMenu">Galeria</RouterLink>
+          <RouterLink to="/contato" @click="toggleMenu">Contatos</RouterLink>
+          <RouterLink to="/orientacoes" @click="toggleMenu">Orientações</RouterLink>
+          <RouterLink to="/a" @click="toggleMenu">Perfil</RouterLink>
         </nav>
       </div>
     </header>
