@@ -3,9 +3,6 @@ import './styles/GaleryPage.css';
 import './styles/GaleryPageResponsive.css';
 import ScrollReveal from 'scrollreveal';
 import { inject, toRef } from 'vue';
-const menuAtivo = inject('menuAtivo');
-
-
 
 export default {
     setup() {
@@ -22,12 +19,14 @@ export default {
             products: [], // Lista para armazenar os produtos da API
         };
     },
+
     async mounted() {
         await this.fetchProducts(); // Carregar os produtos
         this.$nextTick(() => {
             this.initializeScrollReveal(); // Aplica animações aos elementos existentes
         });
     },
+
     watch: {
         // Reaplicar o ScrollReveal sempre que os produtos forem alterados
         products() {
@@ -36,6 +35,7 @@ export default {
             });
         },
     },
+
     methods: {
         async fetchProducts() {
             const URL = 'https://fakestoreapi.com/products';
@@ -49,6 +49,7 @@ export default {
                 console.error('Erro ao carregar produtos:', error.message);
             }
         },
+
         initializeScrollReveal() {
             // Reaplicar animação para todos os cards
             ScrollReveal().reveal('.card_product', {
@@ -56,13 +57,18 @@ export default {
                 distance: '50px',
                 duration: 800,
                 interval: 200,
-                reset: true
+                reset: true,
             });
             ScrollReveal().reveal('#info_top_GaleryPage', {
                 origin: 'top',
                 distance: '50px',
                 duration: 1000,
             });
+        },
+
+        goToProductPage(productId) {
+            this.$router.push({ name: 'Produto', params: { id: productId } });
+            console.log('Redirecionando para o produto ID:', productId);
         },
     },
 };
@@ -83,7 +89,7 @@ export default {
                     </button>
                 </div>
             </div>
-            <div id="grid_product">
+            <div id="grid_product" v-if="products">
                 <div v-for="product in products" :key="product.id" class="card_product">
                     <div id="info_top_card">
                         <img :src="product.image" alt="product.title">
@@ -95,7 +101,7 @@ export default {
                             <p>Quantidade em estoque: <span id="orange_caption">{{product.id}}</span></p>
                         </div>
                         <div id="interactivity">
-                            <button>Comprar</button>
+                            <button @click="goToProductPage(product.id)">Comprar</button>
                             <h3>R$ <span id="orange_caption">{{product.price}}</span></h3>
                         </div>
                     </div>

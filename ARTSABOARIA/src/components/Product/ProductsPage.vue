@@ -1,0 +1,45 @@
+<script>
+export default {
+    props: ['id'], // Recebe o ID do produto via rota ou componente pai
+    data() {
+        return {
+            product: null, // Inicializa o produto como null
+        };
+    },
+    async mounted() {
+        await this.fetchProduct(); // Chama o método para buscar o produto
+    },
+    methods: {
+        async fetchProduct() {
+            const URL = 'https://fakestoreapi.com/products';
+            try {
+                const response = await fetch(URL);
+                if (!response.ok) throw new Error('Erro ao buscar dados da API');
+
+                const data = await response.json();
+                // Encontra o produto pelo ID recebido em props
+                this.product = data.find((p) => p.id === parseInt(this.id));
+            } catch (error) {
+                console.error('Erro ao carregar produto:', error.message);
+            }
+        },
+        goBack() {
+            this.$router.back(); // Navega para a página anterior
+        },
+    },
+};
+</script>
+
+
+<template>
+    <div class="product-details" v-if="product">
+        <img :src="product.image" alt="product.title" width="300em" height="300em">
+        <h1>{{ product.title }}</h1>
+        <p>{{ product.description }}</p>
+        <p><strong>Preço:</strong> R$ {{ product.price }}</p>
+        <button @click="goBack">Voltar</button>
+    </div>
+    <div v-else>
+        <p>Carregando produto...</p>
+    </div>
+</template>
