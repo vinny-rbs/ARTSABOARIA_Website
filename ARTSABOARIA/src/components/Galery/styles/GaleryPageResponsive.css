@@ -9,6 +9,7 @@
         grid-template-rows: auto;
         gap: 2em;
         padding-top: 5em;
+        padding-bottom: 20%;
     }
 
     #container_GaleryPage {
