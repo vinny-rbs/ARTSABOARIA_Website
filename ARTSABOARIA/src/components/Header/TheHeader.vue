@@ -18,6 +18,10 @@ const menuAtivo = ref(false);
 const toggleMenu = () => {
   menuAtivo.value = !menuAtivo.value;
 };
+
+const returnMenu = () => {
+  menuAtivo.value = false;
+};
 provide('menuAtivo', menuAtivo);
 
 </script>
@@ -41,10 +45,10 @@ provide('menuAtivo', menuAtivo);
       <div class="categoria">
         <!-- Navegação com classe ativa no menu -->
         <nav>
-          <RouterLink to="/">Ínicio</RouterLink>
-          <RouterLink to="/galeria">Galeria</RouterLink>
-          <RouterLink to="/contato">Contatos</RouterLink>
-          <RouterLink to="/orientacoes">Orientações</RouterLink>
+          <RouterLink to="/" @click="returnMenu">Ínicio</RouterLink>
+          <RouterLink to="/galeria" @click="returnMenu">Galeria</RouterLink>
+          <RouterLink to="/contato" @click="returnMenu">Contatos</RouterLink>
+          <RouterLink to="/orientacoes" @click="returnMenu">Orientações</RouterLink>
           <RouterLink to="/a">Perfil</RouterLink>
         </nav>
       </div>

@@ -30,10 +30,4 @@
         </div>
     </transition>
         <RouterView />
-
 </template> 
-
-<style>
-    /* Transições baseadas no nome 'fade' */
-
-</style>
