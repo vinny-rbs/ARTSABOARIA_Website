@@ -7,8 +7,8 @@
 </script>
 
 <template>
-    <transition name="fade">
-        <div id="container_LaddingPage" v-if="!menuAtivo">
+    <transition name="fade" v-if="!menuAtivo">
+        <div id="container_LaddingPage">
             <main>
                 <section v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'left'}">
                     <div id="text">

@@ -6,8 +6,8 @@
 </script>
 
 <template>
-    <transition name="fade">
-        <div id="container_OrientationPage" v-if="!menuAtivo">
+    <transition name="fade" v-if="!menuAtivo">
+        <div id="container_OrientationPage" >
             <main>
                 <article v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'left', scale: 1.2}">
                     <div class="titles">

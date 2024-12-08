@@ -42,8 +42,8 @@
     #hamburguer {
         display: block;
         position: relative;
-        width: 30px;
-        height: 30px;
+        width: 2em;
+        height: 2.7em;
         border: none;
         background: none;
         cursor: pointer;
@@ -62,6 +62,10 @@
         position: absolute;
         left: 0;
         transition: 0.3s ease;
+        top: -15px; /* Expande a área acima */
+        bottom: -15px; /* Expande a área abaixo */
+        left: -15px; /* Expande a área à esquerda */
+        right: -15px; /* Expande a área à direita */
     }
 
     #hamburguer::before {
@@ -100,6 +104,18 @@
         font-size: 1.75rem;
         font-weight: bold;
         font-family: 'Nunito', sans-serif;
+        position: relative;
+        z-index: 1001;
+    }
+    nav > a::before, nav > a::after {
+        position: absolute;
+        content: '';
+        top: -40px; /* Expande a área acima */
+        bottom: -40px; /* Expande a área abaixo */
+        left: -40px; /* Expande a área à esquerda */
+        right: -40px; /* Expande a área à direita */
+        background: transparent; /* Invisível para o usuário */
+        z-index: -1; /* Coloca atrás do botão */
     }
 }
 

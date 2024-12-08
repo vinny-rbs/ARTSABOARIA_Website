@@ -76,8 +76,8 @@ export default {
 </script>
 
 <template>
-    <transition name="fade">
-        <div id="container_GaleryPage" v-if="!menuAtivo">
+    <transition name="fade" v-if="!menuAtivo">
+        <div id="container_GaleryPage" >
             <div id="info_top_GaleryPage">
                 <div class="title">
                     <h1>GALERIA</h1>
