@@ -153,6 +153,48 @@ input[type="search"]::-webkit-search-cancel-button {
     color: var(--main-color-orange);
 }
 
+#loading_field {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#loading_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 60px;
+    height: 20px;
+    position: relative;
+  }
+
+#loading_icon::after, #loading_icon::before, #loading_icon span {
+    content: "";
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--main-color-orange);
+    position: absolute;
+    animation: bounce 0.6s infinite ease-in-out;
+}
+
+#loading_icon span {
+    left: 35%;
+    animation-delay: 0.2s;
+}
+
+#loading_icon::before {
+    left: 0;
+    animation-delay: 0s;
+}
+
+#loading_icon::after {
+    right: 0;
+    animation-delay: 0.4s;
+}
+
 @keyframes opacity{
     from {
       opacity: 0;
@@ -161,4 +203,13 @@ input[type="search"]::-webkit-search-cancel-button {
     to {
       opacity: 1;
     }
-  }
+}
+
+@keyframes bounce{
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+}

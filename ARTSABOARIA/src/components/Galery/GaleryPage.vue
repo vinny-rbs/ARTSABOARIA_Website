@@ -49,6 +49,7 @@ export default {
             this.filteredProducts = this.products.filter((product) =>
                 product.title.toLowerCase().includes(query)
             );
+            this.searchQuery = "";
         },
 
         initializeScrollReveal() {
@@ -81,14 +82,11 @@ export default {
             <div id="info_top_GaleryPage">
                 <div class="title">
                     <h1>GALERIA</h1>
+
                 </div>
                 <!-- Campo de busca -->
                 <div id="search_field">
-                    <input
-                        type="search"
-                        v-model="searchQuery"
-                        placeholder="Buscar produtos..."
-                    />
+                    <input type="search" v-model="searchQuery" @keydown.enter="filterProducts" placeholder="Buscar produtos..."/>
                     <button @click="filterProducts">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path
@@ -128,7 +126,9 @@ export default {
                 </div>
             </div>
             <!-- Mensagem caso não haja resultados -->
-            <p v-else>Nenhum produto encontrado.</p>
+            <div id="loading_field" v-else>
+                <div id="loading_icon"><span></span></div>
+            </div>
         </div>
     </transition>
 </template>
