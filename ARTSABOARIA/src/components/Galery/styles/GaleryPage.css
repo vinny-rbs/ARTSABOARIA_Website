@@ -14,6 +14,7 @@ input[type="search"]::-webkit-search-cancel-button {
     overflow-y: auto;
     font-family: 'Inter', sans-serif;
     padding-bottom: 9em;
+    animation: opacity 0.9s ease-in-out;
 }
 
 #info_top_GaleryPage {
