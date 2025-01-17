@@ -1,0 +1,59 @@
+.container-LoginPage {
+    height: 87vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color-white);
+}
+
+.card-LoginPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: aliceblue;
+}
+
+#aside-LoginPage {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color-blue);
+}
+
+#article-LoginPage {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color-blue);
+    padding: 2em;
+}
+
+#form-LoginPage {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+#form-LoginPage input {
+    height: 3em;
+    width: 50%;
+    padding: 1em;
+    font-size: .9rem;
+}
+
+#form-LoginPage input[type=submit] {
+    background-color: var(--main-color-blue);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--main-color-white);
+    cursor: pointer;
+}
