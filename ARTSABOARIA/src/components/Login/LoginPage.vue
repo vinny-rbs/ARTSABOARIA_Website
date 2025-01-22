@@ -1,7 +1,38 @@
-<script>
+<!--<script>
 
 import '../Login/styles/Login.css';
 
+
+
+</script>
+
+
+-->
+
+<script>
+import { useRouter } from 'vue-router';  // Importando o useRouter para redirecionamento
+import '../Login/styles/Login.css';
+
+export default {
+  data() {
+    return {
+      email: '',
+      senha: ''
+    };
+  },
+  methods: {
+    login(event) {
+      event.preventDefault(); // Impede o envio do formulário tradicional
+
+      // Verificando se as credenciais são 'admin@gmail.com' e 'admin'
+      if (this.email === 'admin@gmail.com' && this.senha === 'admin') {
+        this.$router.push('/galeria');  // Redireciona para a página de galeria
+      } else {
+        alert('Credenciais inválidas!');  // Alerta caso as credenciais estejam erradas
+      }
+    }
+  }
+};
 </script>
 
 <template>
@@ -13,10 +44,10 @@ import '../Login/styles/Login.css';
             </aside>
             <article id="article-LoginPage">
                     <h1>Faça o Login</h1>
-                <form action="#" id="form-LoginPage">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="senha">
-                    <input type="submit">
+                <form @submit="login" id="form-LoginPage">
+                    <input type="email" placeholder="Email" v-model="email" required>
+                    <input type="password" placeholder="senha" v-model="senha" required>
+                    <button type="submit">ENTRAR</button>
                 </form>
             </article>
         </div>

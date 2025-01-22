@@ -50,16 +50,5 @@ const router = createRouter({
   ]
 });
 
-// Middleware de autenticação
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = localStorage.getItem('userToken'); // Verifica token
-
-  if (to.meta.requiresAuth && !isAuthenticated) {
-    // Se a rota requer autenticação e o usuário não está autenticado
-    next({ name: 'Login' });
-  } else {
-    next(); // Permite acesso
-  }
-});
 
 export default router
