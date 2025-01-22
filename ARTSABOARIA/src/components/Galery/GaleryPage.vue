@@ -31,7 +31,7 @@ export default {
 
     methods: {
         async fetchProducts() {
-            const URL = 'https://fakestoreapi.com/products';
+            const URL = 'http://localhost:8080/produto/listar';
             try {
                 const response = await fetch(URL);
                 if (!response.ok) throw new Error('Erro ao buscar dados da API');
@@ -105,11 +105,11 @@ export default {
                     class="card_product"
                 >
                     <div id="info_top_card">
-                        <img :src="product.image" :alt="product.title" />
+                        <img :src="product.url_imagem" :alt="product.title" />
                     </div>
                     <div id="info_bottom_card">
                         <div id="description">
-                            <h3>{{ product.title }}</h3>
+                            <h3>{{ product.nome_Produto }}</h3>
                             <p><span id="gray_caption">{{ product.category }}</span></p>
                             <p>
                                 Quantidade em estoque:
@@ -119,7 +119,7 @@ export default {
                         <div id="interactivity">
                             <button @click="goToProductPage(product.id)">Comprar</button>
                             <h3>
-                                R$ <span id="orange_caption">{{ product.price }}</span>
+                                R$ <span id="orange_caption">{{ product.valor_Produto }}</span>
                             </h3>
                         </div>
                     </div>
