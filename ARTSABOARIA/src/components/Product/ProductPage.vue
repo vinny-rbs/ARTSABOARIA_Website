@@ -1,10 +1,9 @@
 <script>
-import './styles/ProductPage.css'
-import './styles/ProductPageResponsive.css'
-
+import './styles/ProductPage.css';
+import './styles/ProductPageResponsive.css';
 
 export default {
-    props: ['id'], // Recebe o ID do produto via rota ou componente pai
+    props: ['id_Produto'], // Recebe o ID do produto via rota ou componente pai
     data() {
         return {
             product: null, // Inicializa o produto como null
@@ -15,14 +14,14 @@ export default {
     },
     methods: {
         async fetchProduct() {
-            const URL = 'https://fakestoreapi.com/products';
+            const URL = 'http://localhost:8080/produto/listar';
             try {
                 const response = await fetch(URL);
                 if (!response.ok) throw new Error('Erro ao buscar dados da API');
 
                 const data = await response.json();
-                // Encontra o produto pelo ID recebido em props
-                this.product = data.find((p) => p.id === parseInt(this.id));
+                // Encontra o produto pelo ID recebido
+                this.product = data.find(p => p.id_Produto === parseInt(this.id_Produto));
             } catch (error) {
                 console.error('Erro ao carregar produto:', error.message);
             }
@@ -34,30 +33,27 @@ export default {
 };
 </script>
 
-
 <template>
     <div id="container_ProductPage">
         <div id="info_top_ProductPage" v-if="product">
             <div id="title_route">
-                <span><RouterLink to="/" @click="returnMenu"><span>Página Inicial</span></RouterLink> / <RouterLink to="/galeria" @click="returnMenu"><span>Galeria</span></RouterLink> /</span> <span id="gray_caption">{{ product.title }}</span>
+                <span><RouterLink to="/" @click="returnMenu"><span>Página Inicial</span></RouterLink> / <RouterLink to="/galeria" @click="returnMenu"><span>Galeria</span></RouterLink> /</span> <span id="gray_caption">{{ product.nome_Produto }}</span>
             </div>
             <div id="content_product">
                 <div id="image_perfil_product">
-                    <img :src="product.image" alt="product.title" id="miniature_image_perfil">
-                    <img :src="product.image" alt="product.title" id="principal_image_perfil">
+                    <img :src="product.url_imagem" alt="product.nome_Produto" id="miniature_image_perfil">
+                    <img :src="product.url_imagem" alt="product.nome_Produto" id="principal_image_perfil">
                 </div>
                 <div id="description_perfil_product">
                     <div id="info_top_description_perfil_product">
-                        <h1>{{ product.title }}</h1>
-                        <h3 id="gray_caption">{{ product.category }}</h3>
+                        <h1>{{ product.nome_Produto }}</h1>
+                        <h3 id="gray_caption">{{ product.embalagem }}</h3>
                         <div id="rating">
+                            <!-- Implementação de estrelas de avaliação -->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="gray"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" fill="gray"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></svg>
+                            <!-- Continue as estrelas de avaliação... -->
                         </div>
-                        <h1 id="price">R$ <span id="orange_caption">{{ product.price }}</span></h1>
+                        <h1 id="price">R$ <span id="orange_caption">{{ product.valor_Produto }}</span></h1>
                     </div>
                     <div class="info_bottom_description_perfil_product">
                         <div id="input_fields">

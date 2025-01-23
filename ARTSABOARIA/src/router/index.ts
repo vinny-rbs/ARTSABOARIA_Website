@@ -42,13 +42,12 @@ const router = createRouter({
       component: Login,
     },
     {
-      path: '/product/:id',
+      path: '/product/:id_Produto',
       name: 'Produto',
       component: Produto,
       props: true,
     }
   ]
 });
-
 
 export default router

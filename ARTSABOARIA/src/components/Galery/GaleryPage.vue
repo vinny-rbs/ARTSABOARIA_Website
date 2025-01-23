@@ -29,7 +29,7 @@ export default {
         });
     },
 
-    methods: {
+        methods: {
         async fetchProducts() {
             const URL = 'http://localhost:8080/produto/listar';
             try {
@@ -47,11 +47,16 @@ export default {
         filterProducts() {
             const query = this.searchQuery.toLowerCase();
             this.filteredProducts = this.products.filter((product) =>
-                product.title.toLowerCase().includes(query)
+                product.nome_Produto.toLowerCase().includes(query)
             );
             this.searchQuery = "";
         },
 
+        goToProductPage(id_Produto) {
+            this.$router.push({ name: 'Produto', params: { id_Produto:id_Produto } });
+            console.log('Redirecionando para o produto ID:', id_Produto);
+        },
+        
         initializeScrollReveal() {
             // Reaplicar animação para todos os cards
             ScrollReveal().reveal('.card_product', {
@@ -66,11 +71,6 @@ export default {
                 distance: '50px',
                 duration: 1000,
             });
-        },
-
-        goToProductPage(productId) {
-            this.$router.push({ name: 'Produto', params: { id: productId } });
-            console.log('Redirecionando para o produto ID:', productId);
         },
     },
 };
@@ -101,23 +101,23 @@ export default {
             <div id="grid_product" v-if="filteredProducts.length">
                 <div
                     v-for="product in filteredProducts"
-                    :key="product.id"
+                    :key="product.id_Produto"
                     class="card_product"
                 >
                     <div id="info_top_card">
-                        <img :src="product.url_imagem" :alt="product.title" />
+                        <img :src="product.url_imagem" :alt="product.nome_Produto" />
                     </div>
                     <div id="info_bottom_card">
                         <div id="description">
                             <h3>{{ product.nome_Produto }}</h3>
-                            <p><span id="gray_caption">{{ product.category }}</span></p>
+                            <p><span id="gray_caption">{{ product.categoria_Ent }}</span></p>
                             <p>
                                 Quantidade em estoque:
-                                <span id="orange_caption">{{ product.id }}</span>
+                                <span id="orange_caption">{{ product.id_Produto }}</span>
                             </p>
                         </div>
                         <div id="interactivity">
-                            <button @click="goToProductPage(product.id)">Comprar</button>
+                            <button @click="goToProductPage(product.id_Produto)">Comprar</button>
                             <h3>
                                 R$ <span id="orange_caption">{{ product.valor_Produto }}</span>
                             </h3>
