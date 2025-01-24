@@ -90,13 +90,13 @@
                                     <input type="text" placeholder="Nome Completo" maxlength="100" v-model="nome" id="nome" required>
                                 </div>
                                 <div class="form_fields">
-                                    <input type="email" placeholder="Email" maxlength="100" v-model="email" id="email" required>
+                                    <input type="email" placeholder="Email" maxlength="80" v-model="email" id="email" required>
                                 </div>
                                 <div class="form_fields">
-                                    <input type="text" placeholder="Título" maxlength="100" v-model="titulo" id="titulo" required>
+                                    <input type="text" placeholder="Título" maxlength="50" v-model="titulo" id="titulo" required>
                                 </div>
                                 <div class="form_fields">
-                                    <textarea placeholder="Mensagem" minlength="50" maxlength="500" v-model="mensagem" id="mensagem" required></textarea>
+                                    <textarea placeholder="Mensagem" minlength="50" maxlength="300" v-model="mensagem" id="mensagem" required></textarea>
                                 </div>
                                 <input type="submit" value="Enviar">
                             </div>

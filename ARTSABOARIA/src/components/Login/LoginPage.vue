@@ -10,7 +10,7 @@ import '../Login/styles/Login.css';
 -->
 
 <script>
-import { useRouter } from 'vue-router';  // Importando o useRouter para redirecionamento
+import { RouterLink, RouterView } from 'vue-router';
 import '../Login/styles/Login.css';
 
 export default {
@@ -47,6 +47,9 @@ export default {
                 <form @submit="login" id="form-LoginPage">
                     <input type="email" placeholder="Email" v-model="email" required>
                     <input type="password" placeholder="senha" v-model="senha" required>
+                    <RouterLink to="/cadastro">
+                            <span>Não possuí uma conta ainda?</span>
+                    </RouterLink>
                     <button type="submit">ENTRAR</button>
                 </form>
             </article>

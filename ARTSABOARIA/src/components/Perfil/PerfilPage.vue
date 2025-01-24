@@ -1,3 +1,3 @@
 <template>
-    <h1>Perfil</h1>
+    <h1>Você está logado</h1>
 </template>

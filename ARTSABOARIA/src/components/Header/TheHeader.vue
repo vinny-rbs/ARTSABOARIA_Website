@@ -49,7 +49,7 @@ provide('menuAtivo', menuAtivo);
           <RouterLink to="/galeria" @click="returnMenu">Galeria</RouterLink>
           <RouterLink to="/contato" @click="returnMenu">Contatos</RouterLink>
           <RouterLink to="/orientacoes" @click="returnMenu">Orientações</RouterLink>
-          <RouterLink to="/login" @click="returnMenu">Perfil</RouterLink>
+          <RouterLink to="/perfil" @click="returnMenu">Perfil</RouterLink>
         </nav>
       </div>
     </header>
