@@ -33,9 +33,18 @@ const router = createRouter({
     },
     {
       path: '/perfil',
-      name: 'Perfil',
+      name: 'perfil',
       component: Perfil,
-      meta: { requiresAuth: true },
+      beforeEnter: (to, from, next) => {
+        // Verifica se o token de autenticação está presente no localStorage
+        const token = localStorage.getItem('authToken');
+        
+        if (token) {
+          next(); // Permite o acesso se o token estiver presente
+        } else {
+          next('/login'); // Redireciona para o login se não houver token
+        }
+      }
     },
     {
       path: '/login',
