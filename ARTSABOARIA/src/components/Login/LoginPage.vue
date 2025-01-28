@@ -1,7 +1,8 @@
 <script>
 import axios from 'axios';  // Importando axios para requisições HTTP
 import { RouterLink } from 'vue-router';
-import '../Login/styles/Login.css';
+import '../Login/styles/LoginPage.css';
+import '../Login/styles/LoginPageResponsive.css';
 
 export default {
   data() {
@@ -44,18 +45,24 @@ export default {
   <div class="container-LoginPage">
     <div class="card-LoginPage">
       <aside id="aside-LoginPage">
-        <h1>Bem-vindo de volta!</h1>
-        <p>De volta para o site</p>
+        <img src="../../assets/images/Wallpaper Login Icon.png" alt="" id="wallpaper-login">
       </aside>
       <article id="article-LoginPage">
-        <h1>Faça o Login</h1>
         <form @submit="login" id="form-LoginPage">
-          <input type="email" placeholder="Email" v-model="email" required />
-          <input type="password" placeholder="Senha" v-model="senha" required />
-          <RouterLink to="/cadastro">
-            <span>Não possui uma conta ainda?</span>
-          </RouterLink>
-          <button type="submit">ENTRAR</button>
+          <div id="title-LoginPage">
+            <h1>OLÁ DE NOVO</h1>
+            <span>Faça login para acompanhar nossos produtos!</span>
+          </div>
+          <div id="control-LoginPage">
+            <input type="email" placeholder="Email" v-model="email" required />
+            <input type="password" placeholder="Senha" v-model="senha" required />
+          </div>
+          <div id="interactivity-LoginPage">
+            <button type="submit">ENTRAR</button>
+            <RouterLink to="/cadastro">
+              <span>Não sou cadastrado no site!</span>
+            </RouterLink>
+          </div>
         </form>
       </article>
     </div>

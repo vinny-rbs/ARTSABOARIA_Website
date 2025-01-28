@@ -1,0 +1,123 @@
+.container-LoginPage {
+    height: 87vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color-white);
+}
+
+.card-LoginPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: aliceblue;
+}
+
+#aside-LoginPage {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color-blue);
+    box-shadow: 0px 2px 8px 4px rgba(95, 95, 95, 0.25);
+}
+
+#article-LoginPage {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color-blue);
+    padding: 2em;
+}
+
+#form-LoginPage {
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+    border: 3px solid var(--main-color-blue);
+    border-radius: 18px;
+    padding: 4em;
+}
+
+#form-LoginPage input {
+    height: 3em;
+    width: 50%;
+    padding: 1em;
+    font-size: .9rem;
+}
+
+#form-LoginPage input[type=submit] {
+    background-color: var(--main-color-blue);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--main-color-white);
+    cursor: pointer;
+}
+
+#wallpaper-login {
+    width: 100%;
+}
+
+#title-LoginPage {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+}
+
+#title-LoginPage h1 {
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+}
+
+#title-LoginPage span {
+    width: auto;
+    text-align: center;
+    color: gray;
+}
+
+#control-LoginPage {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#control-LoginPage input {
+    width: 100%;
+}
+
+#interactivity-LoginPage {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    gap: 2em;
+}
+
+#interactivity-LoginPage button {
+    height: 50%;
+    width: 100%;
+    font-size: 1.25rem;
+    border-radius: 12px;
+    background-color: transparent;
+    color: var(--main-color-blue);
+    border: 3px solid var(--main-color-blue);
+}
