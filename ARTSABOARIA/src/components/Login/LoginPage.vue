@@ -57,11 +57,11 @@ export default {
   <transition name="fade" v-if="!menuAtivo">
     <div class="container-LoginPage">
       <div class="card-LoginPage">
-        <aside id="aside-LoginPage" v-scroll-reveal="{ delay: 200, duration: 1000, distance: '150px', origin: 'left' }">
-          <img src="../../assets/images/Wallpaper Login Icon.png" alt="" id="wallpaper-login">
+        <aside id="aside-LoginPage" v-scroll-reveal="{ delay: 200, duration: 1000, distance: '1000px', opacity: 1 , origin: 'right' }">
+          <img src="../../assets/images/Wallpaper Login Icon.png" alt="" id="wallpaper-LoginPage">
         </aside>
         <article id="article-LoginPage"
-          v-scroll-reveal="{ delay: 200, duration: 1000, distance: '150px', origin: 'right' }">
+          v-scroll-reveal="{ delay: 500, duration: 1000, distance: '1000px', opacity: 1 , origin: 'left' }">
           <form @submit="login" id="form-LoginPage">
             <div id="title-LoginPage">
               <h1>OLÁ DE NOVO</h1>

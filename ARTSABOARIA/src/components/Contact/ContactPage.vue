@@ -98,7 +98,9 @@
                                 <div class="form_fields">
                                     <textarea placeholder="Mensagem" minlength="50" maxlength="300" v-model="mensagem" id="mensagem" required></textarea>
                                 </div>
-                                <input type="submit" value="Enviar">
+                                <div class="interactivity_form_container">
+                                    <input type="submit" value="Enviar">
+                                </div>
                             </div>
                         </form>
                     </div>

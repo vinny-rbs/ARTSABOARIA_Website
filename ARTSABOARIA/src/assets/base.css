@@ -59,8 +59,8 @@ input, textarea {
 }
 
 button {
-    width: 150px;
-    height: 50px;
+    width: 10em;
+    height: 3em;
     background-color: var(--main-color-blue);
     border: none;
     border-radius: 32px;
