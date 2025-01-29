@@ -1,10 +1,22 @@
 <script>
 import axios from 'axios';  // Importando axios para requisições HTTP
 import { RouterLink } from 'vue-router';
+import { inject, toRef } from 'vue';
 import '../Login/styles/LoginPage.css';
 import '../Login/styles/LoginPageResponsive.css';
 
+const menuAtivo = inject('menuAtivo');
+
+
 export default {
+  setup() {
+        // Torna o menuAtivo reativo ao usar inject
+        const menuAtivo = toRef(inject('menuAtivo'));
+
+        return {
+            menuAtivo,
+        };
+    },
   data() {
     return {
       email: '',
@@ -42,29 +54,32 @@ export default {
 </script>
 
 <template>
-  <div class="container-LoginPage">
-    <div class="card-LoginPage">
-      <aside id="aside-LoginPage">
-        <img src="../../assets/images/Wallpaper Login Icon.png" alt="" id="wallpaper-login">
-      </aside>
-      <article id="article-LoginPage">
-        <form @submit="login" id="form-LoginPage">
-          <div id="title-LoginPage">
-            <h1>OLÁ DE NOVO</h1>
-            <span>Faça login para acompanhar nossos produtos!</span>
-          </div>
-          <div id="control-LoginPage">
-            <input type="email" placeholder="Email" v-model="email" required />
-            <input type="password" placeholder="Senha" v-model="senha" required />
-          </div>
-          <div id="interactivity-LoginPage">
-            <button type="submit">ENTRAR</button>
-            <RouterLink to="/cadastro">
-              <span>Não sou cadastrado no site!</span>
-            </RouterLink>
-          </div>
-        </form>
-      </article>
+  <transition name="fade" v-if="!menuAtivo">
+    <div class="container-LoginPage">
+      <div class="card-LoginPage">
+        <aside id="aside-LoginPage" v-scroll-reveal="{ delay: 200, duration: 1000, distance: '150px', origin: 'left' }">
+          <img src="../../assets/images/Wallpaper Login Icon.png" alt="" id="wallpaper-login">
+        </aside>
+        <article id="article-LoginPage"
+          v-scroll-reveal="{ delay: 200, duration: 1000, distance: '150px', origin: 'right' }">
+          <form @submit="login" id="form-LoginPage">
+            <div id="title-LoginPage">
+              <h1>OLÁ DE NOVO</h1>
+              <span>Faça login para acompanhar nossos produtos!</span>
+            </div>
+            <div id="control-LoginPage">
+              <input type="email" placeholder="Email" v-model="email" required />
+              <input type="password" placeholder="Senha" v-model="senha" required />
+            </div>
+            <div id="interactivity-LoginPage">
+              <button type="submit">ENTRAR</button>
+              <RouterLink to="/cadastro">
+                <span>Não sou cadastrado no site!</span>
+              </RouterLink>
+            </div>
+          </form>
+        </article>
+      </div>
     </div>
-  </div>
+  </transition>
 </template>
