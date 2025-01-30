@@ -67,7 +67,7 @@ export default {
     <transition name="fade" v-if="!menuAtivo">
         <div id="container_CadastroPage">
             <article id="article-CadastroPage"
-                v-scroll-reveal="{ delay: 500, duration: 1000, distance: '1000px', opacity: 1 , origin: 'right' }">
+                v-scroll-reveal="{ delay: 500, duration: 1000, distance: '100%', opacity: 1 , origin: 'right' }">
                 <form @submit.prevent="enviarFormulario" id="form-CadastroPage">
                     <div id="title-CadastroPage">
                         <h1>VAMOS COMEÇAR</h1>
@@ -97,7 +97,7 @@ export default {
                 </form>
             </article>
             <aside id="aside_CadastroPage"
-                v-scroll-reveal="{ delay: 200, duration: 1000, distance: '1000px', opacity: 1 , origin: 'left' }">
+                v-scroll-reveal="{ delay: 200, duration: 1000, distance: '100%', opacity: 1 , origin: 'left' }">
                 <img src="../../assets/images/Wallpaper Login Icon.png" alt="" id="wallpaper-CadastroPage">
             </aside>
         </div>
