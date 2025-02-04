@@ -1,7 +1,7 @@
 <script setup lang="ts">
-    import { RouterLink, RouterView } from 'vue-router'
-    import '../main_inicio/styles/MainLaddingPage.css'
-    import '../main_inicio/styles/MainLaddingPageResponsive.css'
+    import { RouterLink, RouterView } from 'vue-router';
+    import '../main_inicio/styles/MainLaddingPage.css';
+    import '../main_inicio/styles/MainLaddingPageResponsive.css';
     import { inject } from 'vue';
     const menuAtivo = inject('menuAtivo');
 </script>
@@ -15,7 +15,7 @@
                         <div id="title">
                             <h1>Quem nós <span>somos</span>?</h1>
                         </div>
-                        <h3>Nós somos uma pequena empresa familiar, fundada recentemente em <span>Búzios-RJ</span> com o intuito de gerar não somente renda mas também movimentar a economia local, gerar empregos e encorajar as pessoas a serem quem elas realmente são, aceitando a si mesmas como elas realmente são, e incentivando-as a cuidarem de si <span>mesmas</span>.</h3>
+                        <h3>Somos uma empresa familiar, recém-fundada em <span>Búzios-RJ</span>, com o objetivo de te incentivar a ser quem você realmente é. Acreditamos que o autocuidado e o bem-estar são essenciais para a sua conexão interior. Oferecemos produtos feitos com carinho, voltado para te fazer sentir único e especial.</h3>
                     </div>
                     <div id="interaction">
                         <RouterLink to="/galeria">

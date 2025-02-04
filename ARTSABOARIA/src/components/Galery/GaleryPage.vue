@@ -127,7 +127,7 @@ export default {
             </div>
             <!-- Mensagem caso não haja resultados -->
             <div id="loading_field" v-else>
-                <div id="loading_icon"><span></span></div>
+                <h1>Nenhum produto encontrado</h1>
             </div>
         </div>
     </transition>

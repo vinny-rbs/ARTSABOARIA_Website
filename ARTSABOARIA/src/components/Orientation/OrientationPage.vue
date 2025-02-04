@@ -21,10 +21,10 @@
                             <h1>Formas devidas</h1>
                         </div>
                         <ol start="1">
-                            <li>Usar o sabonete até o fim</li>
-                            <li>Reciclar o sabonete</li>
-                            <li>Compostagem</li>
-                            <li>Reutilização criativa</li>
+                            <li>Escolher sabonetes naturais</li>
+                            <li>Evitar a poluição da água</li>
+                            <li>Utilize recipientes adequados</li>
+                            <li>Promover a reciclagem</li>
                             <li>Evite embalagens desnecessárias</li>
                         </ol>
                     </div>

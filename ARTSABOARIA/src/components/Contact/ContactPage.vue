@@ -31,8 +31,9 @@
             //enviando para o backend
             const response = await axios.post('http://localhost:8080/mensagem/salvar', payload);
             limparCampos();
+            alert("Enviado com sucesso")
         } catch (error) {
-            console.error('Erro ao enviar os dados:', error);
+            alert('Erro ao enviar os dados:');
         }
 
     };
