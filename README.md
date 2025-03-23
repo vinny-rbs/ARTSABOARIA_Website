@@ -3,13 +3,13 @@ Uma idealização de website para a microempresa Artsaboaria LTDA, facilitando a
 
 ## 🎥 Demonstração  
 
-<img aling="center" src="ARTSABOARIA_Website/ARTSABOARIA/public/Artsaboaria_visualizer.png">
+<img aling="center" src="ARTSABOARIA/public/Artsaboaria_visualizer.png">
 
 ## 📱 Responsividade
 
 <div align="center">
-  <img height="500" width="300" src="ARTSABOARIA_Website/ARTSABOARIA/public/Artsaboaria_visualizer_tablet.png">
-  <img height="400" width="200" src="ARTSABOARIA_Website/ARTSABOARIA/public/Artsaboaria_visualizer_mobile.png">
+  <img height="500" width="300" src="ARTSABOARIA/public/Artsaboaria_visualizer_tablet.png">
+  <img height="400" width="200" src="ARTSABOARIA/public/Artsaboaria_visualizer_mobile.png">
 </div>
 
 ## 🚀 Tecnologias
