@@ -20,11 +20,6 @@ article {
     margin-bottom: 3em;
 }
 
-#title {
-    text-align: center;
-    margin-bottom: 2em;
-}
-
 #description {
     text-align: center;
 }
@@ -98,14 +93,6 @@ svg {
 #contact_button > a > svg:hover {
     filter: brightness(110%);
     transform: scale(1.1);
-}
-
-aside {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #card_form {

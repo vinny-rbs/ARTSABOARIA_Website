@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import TheHeader from './components/Header/TheHeader.vue'
-import { ref } from "vue";
-const menuAtivo = ref(false);
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <TheHeader :menuAtivo.sync="menuAtivo"/>
+  <RouterView />
 </template>

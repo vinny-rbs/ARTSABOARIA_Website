@@ -4,10 +4,8 @@ import './styles/CadastroPageResponsive.css';
 
 import { ref } from 'vue';
 import axios from 'axios';
-import { RouterLink, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { inject, toRef } from 'vue';
-
-const menuAtivo = inject('menuAtivo');
 
 export default {
     setup() {

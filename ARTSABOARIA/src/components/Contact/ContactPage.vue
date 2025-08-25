@@ -1,12 +1,8 @@
 <script setup lang="ts">
     import './styles/ContactStyle.css';
     import './styles/ContactStyleResponsive.css';
-    import './script/interactivy.js';
-    import { inject, ref } from 'vue';
+    import { ref } from 'vue';
     import axios from 'axios';
-
-    //importação de variavel do Header
-    const menuAtivo = inject('menuAtivo');
 
     //enviando para o banco
     const nome = ref('');
@@ -50,7 +46,7 @@
 </script>
 
 <template>
-    <transition name="fade" v-if="!menuAtivo">
+    <transition name="fade">
         <div id="container_contactPage">
             <main>
                 <article v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'top'}">
@@ -100,7 +96,7 @@
                                     <textarea placeholder="Mensagem" minlength="50" maxlength="300" v-model="mensagem" id="mensagem" required></textarea>
                                 </div>
                                 <div class="interactivity_form_container">
-                                    <input type="submit" value="Enviar">
+                                    <input type="submit">
                                 </div>
                             </div>
                         </form>

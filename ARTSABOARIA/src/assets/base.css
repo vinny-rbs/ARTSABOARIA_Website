@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root {
     --main-color-white: #F7F6F3;
     --main-color-black: #1E1A1D;
-    --main-color-blue: #41A1F7;
-    --main-color-blue-low: #e3f1fe;
+    --main-color-blue: oklch(62.3% 0.214 259.815);
+    --main-color-blue-low: #f4f4f4;
     --main-color-orange: #FFA500;
     --main-color-red: #ef233c;
 }
@@ -13,25 +13,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    outline-color: var(--main-color-blue);
+    font-family: 'Mona Sans', sans-serif;
+    outline: none;
 }
 
-body {
+html, body {
+    height: 100%; /* Faz a página ocupar toda a altura da tela */
+    -webkit-font-smoothing: antialiased; /* Deixar textos mais suaves */
     background-color: var(--main-color-white);
-    overflow: hidden;
-}
-
-main {
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 h1 {
     font-size: 2rem;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
 }
 
 p {
@@ -47,45 +47,13 @@ a {
 }
 
 .router-link-active {
-    border-bottom: 2px solid var(--main-color-orange);
+    border-bottom: 3px solid var(--main-color-orange);
 }
 
-input, textarea {
-    height: 2.25em;
-    width: 30em;
-    border: none;
-    border-radius: 8px;
-    resize: none;
-    color: var(--main-color-black);
-}
-
-button {
-    width: 10em;
-    height: 3em;
-    background-color: var(--main-color-blue);
-    border: none;
-    border-radius: 32px;
-    cursor: pointer;
-    color: var(--main-color-white);
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.25s ease-in;
-}
-
-button:hover {
-    transform: scale(1.05);
-    background-color: var(--main-color-blue);
-    filter: brightness(110%);
-}
-
-button:active {
-    transform: scale(0.95);
-    transition: all 0.1s ease-in-out;
-}
 
 /*Responsividade*/
 
-@media (max-width: 1280px) and (max-height: 800px) {
+/* @media (max-width: 1280px) and (max-height: 800px) {
     h1 {
         font-size: 1.50rem;
     }
@@ -97,7 +65,7 @@ button:active {
     p,li {
         font-size: 0.95rem;
     }
-}
+} */
 
 .fade-enter-active, .fade-leave-active {
     transition: opacity 0.3s ease, transform 1s ease;

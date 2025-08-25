@@ -1,12 +1,11 @@
 <script setup lang="ts">
     import './styles/OrientationPage.css';
     import './styles/OrientationPageResponsive.css';
-    import { inject } from 'vue';
-    const menuAtivo = inject('menuAtivo');
+
 </script>
 
 <template>
-    <transition name="fade" v-if="!menuAtivo">
+    <transition name="fade">
         <div id="container_OrientationPage" >
             <main>
                 <article v-scroll-reveal="{delay: 200, duration: 1000, distance: '150px', origin: 'left', scale: 1.2}">

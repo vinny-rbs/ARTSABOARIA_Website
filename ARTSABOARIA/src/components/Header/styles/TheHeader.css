@@ -4,38 +4,40 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 13vh;
-    width: 100vw;
-    padding: 50px;
+    padding: 1.5em clamp(3em, 7vw,10em);
     background-color: var(--main-color-white);
-    box-shadow: 0px 5px 13px 5px rgba(0, 0, 0, 0.025);
+    box-shadow: 0px 4px 12px 4px rgba(140, 140, 140, 0.125);
 }
 
 #logo {
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 }
 
 #logo_icon {
-    width: 3.75em;
-    height: 3.75em;
+    width: clamp(2.5em, 3vw, 3em);
+    height: clamp(2.5em, 3vw, 3em);
 }
 
 #logo_text {
-    width: 15em;
-    height: 3.75em;
+    width: clamp(10em, 15vw, 15em);
+    height: clamp(1.5em, 15vw, 3.75em);
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
-    width: 50em;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(3em, 5vw, 5em);
 }
 
 nav > a {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     color: #41A1F7;
-    font-size: 20px;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
     text-decoration-color: transparent;
 }
 

@@ -1,19 +1,8 @@
 <script>
 import './styles/GaleryPage.css';
 import './styles/GaleryPageResponsive.css';
-import ScrollReveal from 'scrollreveal';
-import { inject, toRef } from 'vue';
 
 export default {
-    setup() {
-        // Torna o menuAtivo reativo ao usar inject
-        const menuAtivo = toRef(inject('menuAtivo'));
-
-        return {
-            menuAtivo,
-        };
-    },
-
     data() {
         return {
             products: [], // Lista de produtos da API
@@ -56,35 +45,17 @@ export default {
             this.$router.push({ name: 'Produto', params: { id_Produto:id_Produto } });
             console.log('Redirecionando para o produto ID:', id_Produto);
         },
-        
-        initializeScrollReveal() {
-            // Reaplicar animação para todos os cards
-            ScrollReveal().reveal('.card_product', {
-                origin: 'bottom',
-                distance: '50px',
-                duration: 800,
-                interval: 200,
-                reset: true,
-            });
-            ScrollReveal().reveal('#info_top_GaleryPage', {
-                origin: 'top',
-                distance: '50px',
-                duration: 1000,
-            });
-        },
     },
 };
 </script>
 
 <template>
-    <transition name="fade" v-if="!menuAtivo">
+    <transition name="fade">
         <div id="container_GaleryPage" >
             <div id="info_top_GaleryPage">
                 <div class="title">
                     <h1>GALERIA</h1>
-
                 </div>
-                <!-- Campo de busca -->
                 <div id="search_field">
                     <input type="search" v-model="searchQuery" @keydown.enter="filterProducts" placeholder="Buscar produtos..."/>
                     <button @click="filterProducts">
@@ -97,7 +68,6 @@ export default {
                     </button>
                 </div>
             </div>
-            <!-- Grid de produtos filtrados -->
             <div id="grid_product" v-if="filteredProducts.length">
                 <div
                     v-for="product in filteredProducts"
@@ -125,7 +95,6 @@ export default {
                     </div>
                 </div>
             </div>
-            <!-- Mensagem caso não haja resultados -->
             <div id="loading_field" v-else>
                 <h1>Nenhum produto encontrado</h1>
             </div>
